@@ -2,9 +2,7 @@
 
 
 ---
-# 📅 Deadline For 60 marks: 23th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 50 marks: 24th February, 2026 (11:59 pm ⏱️)
-# 📅 Deadline For 30 marks: Any time after 24th February.
+# 📅 No Deadline For 60 marks <span style="color: #22c55e;">( যেকোনো সময়ে সাবমিট করলেই ৬০ মার্কে কাউন্ট হবে এবং এর জন্য কোনো লাইফ ব্যবহার করতে হবে না)</span>
 
 
 # Main Requirements
