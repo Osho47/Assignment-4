@@ -6,36 +6,44 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Job Applications</title>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <style type="text/tailwindcss">
+     <style type="text/tailwindcss">
         @theme {
-          --font-dm: "DM Sans", sans-serif;
-          --color-navy: #1d3557;
-          --color-teal: #2a9d8f;
-          --color-coral: #e76f51;
-          --animate-fade-up: fadeUp 0.3s ease forwards;
-            @keyframes fadeUp {
-                0% { opacity: 0; transform: translateY(10px); }
-                100% { opacity: 1; transform: translateY(0); }
-            }
+        --font-dm: "DM Sans", sans-serif;
+        --color-navy: #1d3557;
+        --color-teal: #2a9d8f;
+        --color-coral: #e76f51;
+
+        --animate-fade-up: fadeUp 0.3s ease forwards;
+        @keyframes fadeUp {
+          0% {
+            opacity: 0;
+            transform: translateY(10px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateY(0);
+          }
         }
+      }
     </style>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
-    <script src="https://kit.fontawesome.com/cc9e8f4940.js" crossorigin="anonymous"></script>
+     <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap"
+        rel="stylesheet" />
+        <script src="https://kit.fontawesome.com/cc9e8f4940.js" crossorigin="anonymous"></script>
+
 </head>
 
 <body class="bg-slate-100 font-dm min-h-screen">
 
-    
+    <!-- Header -->
     <header class="px-5 py-6 md:max-w-6xl mx-auto">
         <h1 class="font-sans text-2xl md:text-3xl font-extrabold text-navy tracking-tight">
             Job Application Tracker
         </h1>
     </header>
-
     <div class="md:max-w-6xl mx-auto">
         <main class="px-5 pb-10 lg:px-10 overflow-y-auto">
-
-            
+             <!--       Stats Cards     -->
             <div class="flex flex-wrap gap-4 mb-6">
                 <div class="flex-1 min-w-28 bg-white rounded-2xl px-6 py-5 shadow-sm">
                     <p class="text-xs text-slate-500 mb-1">Total</p>
@@ -50,16 +58,12 @@
                     <p id="totalRejected" class="font-sans text-4xl font-extrabold text-coral">0</p>
                 </div>
             </div>
-
             <hr class="border-slate-200 mb-6" />
-
-            
+             <!--      Section Header & tabs      -->
             <div class="flex items-center justify-between flex-wrap gap-2 mb-4">
                 <h2 class="font-sans text-xl font-bold text-navy">Available Jobs</h2>
                 <span class="text-sm text-slate-500 font-medium"><span id="available">8</span> jobs</span>
             </div>
-
-            
             <div class="flex flex-wrap gap-2 mb-5">
                 <button id="type-all" onclick="changingTabs('all')"
                     class="px-5 py-1.5 rounded-md border-2 text-sm font-medium cursor-pointer transition-all duration-200">
@@ -74,8 +78,7 @@
                     Rejected
                 </button>
             </div>
-
-            
+            <!--        Job Cards        -->
             <div id="cards" class="flex flex-col gap-4">
                  <section id="sectionAll" class="flex flex-col gap-2">
 
@@ -275,6 +278,7 @@
             </div>
         </main>
     </div>
+    <script src="job.js"></script>
 
 </body>
 </html>
