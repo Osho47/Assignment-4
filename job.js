@@ -94,3 +94,5 @@ function count() {
         available.innerText = sectionReject.children.length;
     }
 }
+changingTabs(currentTab);
+count();

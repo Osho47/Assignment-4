@@ -12,6 +12,11 @@
           --color-navy: #1d3557;
           --color-teal: #2a9d8f;
           --color-coral: #e76f51;
+          --animate-fade-up: fadeUp 0.3s ease forwards;
+            @keyframes fadeUp {
+                0% { opacity: 0; transform: translateY(10px); }
+                100% { opacity: 1; transform: translateY(0); }
+            }
         }
     </style>
     <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
