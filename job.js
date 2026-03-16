@@ -56,3 +56,41 @@ function changingTabs(tab) {
         empty.classList.add("hidden");
     }
 }
+
+document.getElementById("cards").addEventListener("click", function(events) {
+    const clickedElement = events.target;
+    const card = clickedElement.closest(".card");
+    const status = card.querySelector(".status");
+    const cardSection = card.parentNode;
+
+    if (clickedElement.classList.contains("inter")) {
+        sectionInterview.appendChild(card);
+        status.innerText = "Interviewed";
+        count();
+    }
+    if (clickedElement.classList.contains("rej")) {
+        sectionReject.appendChild(card);
+        status.innerText = "Rejected";
+        count();
+    }
+    if (clickedElement.classList.contains("del")) {
+        cardSection.removeChild(card);
+        count();
+    }
+});
+
+function count() {
+    totalAll.innerText = sectionAll.children.length;
+    totalInterview.innerText = sectionInterview.children.length;
+    totalRejected.innerText = sectionReject.children.length;
+
+    if (currentTab === "all") {
+        available.innerText = sectionAll.children.length;
+    }
+    if (currentTab === "interview") {
+        available.innerText = sectionInterview.children.length;
+    }
+    if (currentTab === "rejected") {
+        available.innerText = sectionReject.children.length;
+    }
+}
